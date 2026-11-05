@@ -1,0 +1,151 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263445;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+/* ===== TÍTULO ===== */
+h1 {
+    color: #1e3a5f;
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ===== FORMULÁRIO ===== */
+form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(30, 58, 95, 0.08);
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ===== CAMPOS ===== */
+input[type="text"],
+input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+
+    margin-top: 8px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    background: #f9fbfe;
+    color: #263445;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #3978c5;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(57, 120, 197, 0.12);
+}
+
+/* ===== BOTÕES ===== */
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"] {
+    background: #2864a6;
+    color: white;
+    margin-right: 8px;
+}
+
+input[type="submit"]:hover {
+    background: #1e4e85;
+    transform: translateY(-2px);
+}
+
+input[type="reset"] {
+    background: #e8edf4;
+    color: #42546b;
+}
+
+input[type="reset"]:hover {
+    background: #d7e0eb;
+}
+
+/* ===== ÁREA DE RESULTADO ===== */
+div {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+
+    margin-top: 22px;
+    padding: 25px 30px;
+
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(30, 58, 95, 0.08);
+}
+
+h3 {
+    color: #1e3a5f;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+    border-bottom: 2px solid #e8eef6;
+    padding-bottom: 12px;
+}
+
+p {
+    color: #52647a;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    form,
+    div {
+        padding: 22px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 11px 15px;
+    }
+}

@@ -1,0 +1,277 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(221, 204, 255, 0.65),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(243, 218, 250, 0.75),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f5ff,
+            #f0eafa,
+            #faf5fc
+        );
+
+    background-attachment: fixed;
+
+    color: #49385f;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+header {
+    padding: 30px 20px;
+    text-align: center;
+
+    background: linear-gradient(
+        110deg,
+        #c9b5e8,
+        #d9c6f0,
+        #e8d9f5
+    );
+
+    border-bottom: 1px solid #ddccef;
+
+    box-shadow: 0 4px 20px rgba(105, 75, 140, 0.08);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #49345f;
+}
+
+/* =================================
+   GRADE DE PROJETOS
+================================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 55px auto;
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+/* =================================
+   CARDS
+================================= */
+
+main div {
+    position: relative;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f6f0fc
+    );
+
+    border: 1px solid #e6d9f2;
+    border-radius: 16px;
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(111, 79, 145, 0.07);
+}
+
+/* Detalhe superior */
+
+main div::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #c4a5e8,
+        #dfc3f1,
+        #ead5f5
+    );
+}
+
+/* Efeito hover */
+
+main div:hover {
+    transform: translateY(-6px);
+
+    border-color: #c5a6e6;
+
+    box-shadow:
+        0 12px 28px rgba(137, 102, 174, 0.14);
+}
+
+/* =================================
+   TÍTULOS
+================================= */
+
+main div h4 {
+    color: #604776;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    margin-bottom: 16px;
+    min-height: 28px;
+}
+
+/* =================================
+   IMAGENS
+================================= */
+
+main div a {
+    display: block;
+
+    width: 100%;
+    max-width: 170px;
+
+    overflow: hidden;
+    border-radius: 12px;
+
+    border: 1px solid #e4d5ef;
+    background: #f0e8f8;
+}
+
+main div img {
+    display: block;
+
+    width: 100%;
+    height: 135px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+main div a:hover img {
+    transform: scale(1.06);
+}
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    margin-top: auto;
+
+    padding: 25px 15px;
+    text-align: center;
+
+    background: linear-gradient(
+        110deg,
+        #e5d8f1,
+        #d8c6e9,
+        #e9dcef
+    );
+
+    border-top: 1px solid #ddccef;
+}
+
+footer p {
+    color: #705783;
+    font-size: 0.85rem;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 700px) {
+
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        width: 92%;
+        gap: 15px;
+
+        margin: 35px auto;
+    }
+
+    main div {
+        padding: 15px 10px;
+    }
+
+    main div h4 {
+        font-size: 0.95rem;
+    }
+
+    main div a {
+        max-width: 145px;
+    }
+
+    main div img {
+        height: 115px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+
+    main {
+        grid-template-columns: 1fr;
+        width: 88%;
+    }
+
+    main div {
+        padding: 20px;
+    }
+
+    main div h4 {
+        font-size: 1.05rem;
+    }
+
+    main div a {
+        max-width: 170px;
+    }
+
+    main div img {
+        height: 135px;
+    }
+}
